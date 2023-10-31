@@ -2,6 +2,7 @@
 # This pipeline needs the following tasks from Tekton Hub
 #   - git-clone
 #   - flake8
+#   - test
 #
 ---
 apiVersion: tekton.dev/v1beta1
@@ -50,4 +51,3 @@ spec:
         value: ["--count","--max-complexity=10","--max-line-length=127","--statistics"]
       runAfter:
         - clone
-
